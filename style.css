@@ -1,0 +1,119 @@
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #2b2c30;
+}
+input{
+    height: 30px;
+
+}
+h2{
+    color: #fff;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+li {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #090000;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    font-style: italic;
+}
+
+li:hover{
+    background-color: rgb(233, 92, 92);
+}
+.concluida {
+    text-decoration: line-through;
+    color: gray;
+}
+#botao1 {
+    margin-left: 10px;
+    background-color: #ffd900;
+    border-radius: 5px;
+}
+#botao1:hover{
+    background-color: #48ff00;
+    color: #000000;
+    cursor: pointer;
+    scale: 120%;
+}
+#botao2 {
+    margin-left: 10px;
+    background-color: #ffd900;
+    border-radius: 5px;
+}
+#botao2:hover{
+    background-color: #ff0000;
+    color: #000000;
+    cursor: pointer;
+    scale: 120%;
+}
+.numero {
+    margin-left: 4px;
+}
+.turma{
+    margin-left:100px ;
+    color: rgb(0, 132, 255);
+    
+}
+.turma2{
+    margin-left: 100px;
+    color: #006419;
+}
+.turma3{
+    margin-left: 100px;
+    color: #00ff40a1;
+}
+.turma5{
+    margin-left: 100px;
+    color: #001aff;
+}
+.turma4{
+    margin-left: 100px;
+    color: #d5f136;
+}
+
+.aluno-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer {
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#casa{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgba(22, 78, 11, 0.76);
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#casa:hover{
+    scale: 120%;
+}
