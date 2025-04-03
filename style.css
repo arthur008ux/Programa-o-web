@@ -1,119 +1,155 @@
- body {
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #2b2c30;
-}
-input{
-    height: 30px;
-
-}
-h2{
+    background: linear-gradient(135deg, #1e1f26, #3b3b58);
     color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+input, select, button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+}
+input, select {
+    background: #fff;
+    width: 100%;
+}
+#alunoinput {
+    width: calc(100% - 20px);
+    max-width: 100%;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+button {
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+}
+#botao1 {
+    background: linear-gradient(45deg, #4caf50, #2e7d32);
+    color: white;
+}
+#botao1:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #66bb6a, #388e3c);
+}
+#botao2 {
+    background: linear-gradient(45deg, #d32f2f, #b71c1c);
+    color: white;
+}
+#botao2:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #e57373, #c62828);
 }
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: 20px;
 }
+
+/* Estilo para o cabeçalho da tabela */
+#listaAlunosHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 li {
-    margin: 5px 0;
-    padding: 8px;
-    border: 1px solid #ddd;
-    cursor: pointer;
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
-    color: #090000;
-    width: 500px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    display: flex;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
-    font-style: italic;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
 }
 
-li:hover{
-    background-color: rgb(233, 92, 92);
-}
-.concluida {
-    text-decoration: line-through;
-    color: gray;
-}
-#botao1 {
-    margin-left: 10px;
-    background-color: #ffd900;
-    border-radius: 5px;
-}
-#botao1:hover{
-    background-color: #48ff00;
-    color: #000000;
-    cursor: pointer;
-    scale: 120%;
-}
-#botao2 {
-    margin-left: 10px;
-    background-color: #ffd900;
-    border-radius: 5px;
-}
-#botao2:hover{
-    background-color: #ff0000;
-    color: #000000;
-    cursor: pointer;
-    scale: 120%;
-}
-.numero {
-    margin-left: 4px;
-}
-.turma{
-    margin-left:100px ;
-    color: rgb(0, 132, 255);
-    
-}
-.turma2{
-    margin-left: 100px;
-    color: #006419;
-}
-.turma3{
-    margin-left: 100px;
-    color: #00ff40a1;
-}
-.turma5{
-    margin-left: 100px;
-    color: #001aff;
-}
-.turma4{
-    margin-left: 100px;
-    color: #d5f136;
+li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
 }
 
+/* Estilo para as informações do aluno */
 .aluno-info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
 }
 
-footer {
-    color: #fff;
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Estilo para itens concluídos */
+li.concluida .aluno-info {
+    text-decoration: line-through;
+    color: #b0bec5;
+}
+
+/* Ajuste do cabeçalho */
+#listaAlunosHeader, li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+/* Garantir que os spans do cabeçalho e dos itens fiquem alinhados */
+#listaAlunosHeader span, .aluno-info, button#casa {
+    flex: 1;
     text-align: center;
 }
 
-#casa{
-    font-family:Arial, Helvetica, sans-serif;
-    color: rgba(22, 78, 11, 0.76);
-    background-color: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
+/* Ajuste do botão de remover */
+button#casa {
+    width: 0px; /* Define um tamanho fixo */
+    height: 28px;
+    padding: 0; /* Remove qualquer padding extra */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; /* Ajusta o tamanho do ícone */
+    flex-shrink: 0; /* Impede que o botão se expanda */
 }
 
-#casa:hover{
-    scale: 120%;
+
+button#casa:hover {
+    background:#ffffff;
+    transform: scale(1.1);
+}
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
 }
